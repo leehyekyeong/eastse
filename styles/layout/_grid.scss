@@ -3,9 +3,9 @@ $gutter: 20px;
 $sm-columns: 4;
 $sm-margin: 5px;
 
-$md-columns: 12;
-$md-margin: 30px;
-$md-max-container: 960px + $md-margin * 2;
+// $md-columns: 12;
+// $md-margin: 30px;
+// $md-max-container: 960px + $md-margin * 2;
 
 $lg-columns: 12;
 $lg-unit: 75px;
@@ -33,18 +33,18 @@ $lg-max-container: ($lg-unit + $gutter) * $lg-columns;
     }
   }
 
-  @include responsive(T) {
-    max-width: $md-max-container;
-    padding: 0 $md-margin;
+  // @include responsive(T) {
+  //   max-width: $md-max-container;
+  //   padding: 0 $md-margin;
 
-    @for $i from 1 through $md-columns {
-      // @debug $i;
-      .col-md-#{$i} {
-        // width: $i / $md-columns * 100%;
-        width: percentage($i / $md-columns);
-      }
-    }
-  }
+  //   @for $i from 1 through $md-columns {
+  //     // @debug $i;
+  //     .col-md-#{$i} {
+  //       // width: $i / $md-columns * 100%;
+  //       width: percentage($i / $md-columns);
+  //     }
+  //   }
+  // }
 
   @include responsive(D) {
     max-width: $lg-max-container;
