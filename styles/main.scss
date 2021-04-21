@@ -1,7 +1,8 @@
 @import './variable/breakpoint';
 @import './variable/color';
 
-@import './base/font';
+@import './base/typography';
+@import './base/fonts';
 @import './base/normalize';
 @import './base/reset';
 
@@ -11,3 +12,6 @@
 @import './mixin/text-style';
 
 @import './layout/grid';
+
+@import './component/GNB';
+@import './component/landing';
