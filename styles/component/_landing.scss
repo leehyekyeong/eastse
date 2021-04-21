@@ -1,0 +1,27 @@
+.landing-container {
+  background-color: $blue-light;
+  color: $blue-dark;
+  margin-top: 44px;
+}
+
+.landing {
+  padding: 20px 0;
+  position: relative;
+  .landing-text {
+    position: absolute;
+    top: 24px;
+  }
+  .landing-subtitle {
+    padding-left: 1px;
+    @include text-style(14);
+    line-height: 1;
+  }
+  .landing-title {
+    @include text-style(24);
+    font-weight: 800;
+  }
+  .landing-image,
+  .landing-image img {
+    width: 100%;
+  }
+}

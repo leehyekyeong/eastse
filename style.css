@@ -1,4 +1,42 @@
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@font-face {
+  font-family: 'eastse';
+  src: url("./assets/fonts/eastse.eot");
+  src: url("./assets/fonts/eastse.eot#iefix") format("embedded-opentype"), url("./assets/fonts/eastse.ttf") format("truetype"), url("./assets/fonts/eastse.woff") format("woff"), url("./assets/fonts/eastse.svg#eastse") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block; }
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'eastse' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.ic-down:before {
+  content: '\e900'; }
+
+.ic-menu:before {
+  content: '\e901'; }
+
+.ic-next:before {
+  content: '\e902'; }
+
+.ic-prev:before {
+  content: '\e903'; }
+
+.ic-search:before {
+  content: '\e904'; }
+
+.ic-up:before {
+  content: '\e905'; }
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -364,34 +402,6 @@ table {
     width: 75%; }
   .container .col-sm-4 {
     width: 100%; }
-  @media screen and (min-width: 768px) {
-    .container {
-      max-width: 1020px;
-      padding: 0 30px; }
-      .container .col-md-1 {
-        width: 8.33333%; }
-      .container .col-md-2 {
-        width: 16.66667%; }
-      .container .col-md-3 {
-        width: 25%; }
-      .container .col-md-4 {
-        width: 33.33333%; }
-      .container .col-md-5 {
-        width: 41.66667%; }
-      .container .col-md-6 {
-        width: 50%; }
-      .container .col-md-7 {
-        width: 58.33333%; }
-      .container .col-md-8 {
-        width: 66.66667%; }
-      .container .col-md-9 {
-        width: 75%; }
-      .container .col-md-10 {
-        width: 83.33333%; }
-      .container .col-md-11 {
-        width: 91.66667%; }
-      .container .col-md-12 {
-        width: 100%; } }
   @media screen and (min-width: 1200px) {
     .container {
       max-width: 1140px;
@@ -420,3 +430,53 @@ table {
         width: 1045px; }
       .container .col-lg-12 {
         width: 1140px; } }
+
+.global-nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  color: #296eb4;
+  height: 44px;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.global-nav-row {
+  width: 100%; }
+
+.global-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .global-nav i {
+    font-size: 20px; }
+  .global-nav #logo {
+    height: 20px; }
+
+.landing-container {
+  background-color: #d7f0fb;
+  color: #296eb4;
+  margin-top: 44px; }
+
+.landing {
+  padding: 20px 0;
+  position: relative; }
+  .landing .landing-text {
+    position: absolute;
+    top: 24px; }
+  .landing .landing-subtitle {
+    padding-left: 1px;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    line-height: 1; }
+  .landing .landing-title {
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: -0.03em;
+    font-weight: 800; }
+  .landing .landing-image,
+  .landing .landing-image img {
+    width: 100%; }
