@@ -1,45 +1,54 @@
 @mixin text-style-12() {
-  $font-size-12: 12px;
-  $line-height-12: 16px;
-  $letter-spacing-12: -0.005em;
-}
-
-@mixin text-style-13() {
-  $font-size-13: 13px;
-  $line-height-13: 20px;
-  $letter-spacing-13: -0.01em;
+  font-size: $font-size-12;
+  line-height: $line-height-12;
+  letter-spacing: $letter-spacing-12;
 }
 
 @mixin text-style-14() {
-  $font-size-14: 14px;
-  $line-height-14: 24px;
-  $letter-spacing-14: -0.01em;
+  font-size: $font-size-14;
+  line-height: $line-height-14;
+  letter-spacing: $letter-spacing-14;
 }
 
 @mixin text-style-16() {
-  $font-size-16: 16px;
-  $line-height-16: 24px;
-  $letter-spacing-16: -0.01em;
+  font-size: $font-size-16;
+  line-height: $line-height-16;
+  letter-spacing: $letter-spacing-16;
 }
 
 @mixin text-style-18() {
-  $font-size-18: 18px;
-  $line-height-18: 28px;
-  $letter-spacing-18: -0.02em;
+  font-size: $font-size-18;
+  line-height: $line-height-18;
+  letter-spacing: $letter-spacing-18;
+}
+
+@mixin text-style-20() {
+  font-size: $font-size-20;
+  line-height: $line-height-20;
+  letter-spacing: $letter-spacing-20;
 }
 
 @mixin text-style-24() {
-  $font-size-24: 24px;
-  $line-height-24: 34px;
-  $letter-spacing-24: -0.01em;
+  font-size: $font-size-24;
+  line-height: $line-height-24;
+  letter-spacing: $letter-spacing-24;
+}
+
+@mixin text-style-36() {
+  font-size: $font-size-36;
+  line-height: $line-height-36;
+  letter-spacing: $letter-spacing-36;
+}
+
+@mixin text-style-48() {
+  font-size: $font-size-48;
+  line-height: $line-height-48;
+  letter-spacing: $letter-spacing-48;
 }
 
 @mixin text-style($size, $color: false) {
   @if ($size == 12) {
     @include text-style-12;
-  }
-  @if ($size == 13) {
-    @include text-style-13;
   }
   @if ($size == 14) {
     @include text-style-14;
@@ -50,10 +59,18 @@
   @if ($size == 18) {
     @include text-style-18;
   }
+  @if ($size == 20) {
+    @include text-style-20;
+  }
   @if ($size == 24) {
     @include text-style-24;
   }
-
+  @if ($size == 36) {
+    @include text-style-36;
+  }
+  @if ($size == 48) {
+    @include text-style-48;
+  }
   @if (type-of($color) == color) {
     color: $color;
   }
