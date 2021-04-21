@@ -21,4 +21,67 @@
   #logo {
     height: 20px;
   }
+  .menu {
+    @include flexbox;
+  }
+  .menu-list {
+    @include text-style(20, $primary);
+    @include flexbox;
+    margin-right: 80px;
+    li {
+      margin-right: 100px;
+    }
+    li:last-child {
+      margin: 0;
+    }
+  }
+  .search {
+    position: relative;
+    input {
+      width: 200px;
+      height: 35px;
+      padding: 9px 14px 10px;
+      border-radius: 18px;
+      border: 1px solid $blue-dark;
+      @include text-style(16, $secondary);
+      &::placeholder {
+        @include text-style(16, $border);
+        line-height: 1;
+      }
+    }
+    .search-icon {
+      position: absolute;
+      right: 12px;
+      top: 7px;
+      width: 22px;
+      height: 22px;
+      background-image: url('../../assets/icon/input-search.svg');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      cursor: pointer;
+    }
+  }
+  .menu,
+  .search {
+    display: none;
+  }
+}
+
+@include responsive(D) {
+  .global-nav-container {
+    height: 100px;
+  }
+  .global-nav {
+    i {
+      display: none;
+    }
+    #logo {
+      height: 40px;
+    }
+    .menu,
+    .search {
+      display: flex;
+    }
+  }
 }
