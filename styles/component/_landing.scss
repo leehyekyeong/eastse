@@ -39,7 +39,7 @@
   }
   .landing {
     position: relative;
-    height: 640px;
+    height: 560px;
     @include flexbox(end, start);
     padding: 120px 0 80px;
     .landing-text {
@@ -63,16 +63,16 @@
     }
     .landing-image {
       position: absolute;
-      width: 580px;
+      width: 480px;
       top: -24px;
-      left: 0;
+      left: 72px;
       z-index: 1;
     }
   }
   .shortcut {
     @include flexbox;
     position: relative;
-    top: -76px;
+    top: -96px;
     z-index: 0;
     max-width: 1200px;
     @include text-style(16, $blue-dark);
