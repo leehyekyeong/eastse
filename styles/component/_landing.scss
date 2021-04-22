@@ -29,13 +29,17 @@
   }
 }
 
+.shortcut {
+  display: none;
+}
+
 @include responsive(D) {
   .landing-container {
     margin-top: 100px;
   }
   .landing {
     position: relative;
-    height: 720px;
+    height: 640px;
     @include flexbox(end, start);
     padding: 120px 0 80px;
     .landing-text {
@@ -60,8 +64,46 @@
     .landing-image {
       position: absolute;
       width: 580px;
-      top: 0;
+      top: -24px;
       left: 0;
+      z-index: 1;
+    }
+  }
+  .shortcut {
+    @include flexbox;
+    position: relative;
+    top: -76px;
+    z-index: 0;
+    max-width: 1200px;
+    @include text-style(16, $blue-dark);
+    font-weight: bold;
+    .shortcut-item {
+      width: 25%;
+      height: 160px;
+      background-color: $white;
+      cursor: pointer;
+      @include column-flexbox;
+      transition: all 0.25s ease-in;
+      &:hover {
+        background-color: $blue-dark;
+        color: $white;
+      }
+      &:first-child {
+        border-top-left-radius: 24px;
+        border-bottom-left-radius: 24px;
+      }
+      &:last-child {
+        border-top-right-radius: 24px;
+        border-bottom-right-radius: 24px;
+      }
+      .shortcut-icon {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 16px;
+        & img {
+          height: 100%;
+        }
+      }
     }
   }
 }

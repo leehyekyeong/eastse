@@ -404,8 +404,10 @@ table {
     width: 100%; }
   @media screen and (min-width: 1200px) {
     .container {
-      max-width: 1140px;
       padding: 0; }
+      .container .row {
+        max-width: 1140px;
+        margin: 0 auto; }
       .container .col-lg-1 {
         width: 95px; }
       .container .col-lg-2 {
@@ -435,6 +437,7 @@ table {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 2;
   background-color: #ffffff;
   color: #296eb4;
   height: 44px;
@@ -454,6 +457,66 @@ table {
     font-size: 20px; }
   .global-nav #logo {
     height: 20px; }
+  .global-nav .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .global-nav .menu-list {
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: -0.03em;
+    color: #3f4150;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 80px; }
+    .global-nav .menu-list li {
+      margin-right: 100px; }
+    .global-nav .menu-list li:last-child {
+      margin: 0; }
+  .global-nav .search {
+    position: relative; }
+    .global-nav .search input {
+      width: 200px;
+      height: 35px;
+      padding: 9px 14px 10px;
+      border-radius: 18px;
+      border: 1px solid #296eb4;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.03em;
+      color: #8c8d96; }
+      .global-nav .search input::placeholder {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.03em;
+        color: #cccccc;
+        line-height: 1; }
+    .global-nav .search .search-icon {
+      position: absolute;
+      right: 12px;
+      top: 7px;
+      width: 22px;
+      height: 22px;
+      background-image: url("../../assets/icon/input-search.svg");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      cursor: pointer; }
+  .global-nav .menu,
+  .global-nav .search {
+    display: none; }
+
+@media screen and (min-width: 1200px) {
+  .global-nav-container {
+    height: 100px; }
+  .global-nav i {
+    display: none; }
+  .global-nav #logo {
+    height: 40px; }
+  .global-nav .menu,
+  .global-nav .search {
+    display: flex; } }
 
 .landing-container {
   background-color: #d7f0fb;
@@ -477,6 +540,89 @@ table {
     line-height: 36px;
     letter-spacing: -0.03em;
     font-weight: 800; }
+  .landing .landing-desc {
+    display: none; }
   .landing .landing-image,
   .landing .landing-image img {
     width: 100%; }
+
+.shortcut {
+  display: none; }
+
+@media screen and (min-width: 1200px) {
+  .landing-container {
+    margin-top: 100px; }
+  .landing {
+    position: relative;
+    height: 640px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 120px 0 80px; }
+    .landing .landing-text {
+      position: static;
+      max-width: 464px; }
+    .landing .landing-subtitle {
+      padding-left: 2px;
+      font-size: 20px;
+      line-height: 32px;
+      letter-spacing: -0.03em; }
+    .landing .landing-title {
+      font-size: 48px;
+      line-height: 54px;
+      letter-spacing: -0.03em;
+      margin-bottom: 28px; }
+    .landing .landing-desc {
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: -0.02em;
+      word-break: keep-all;
+      display: block;
+      border-left: 4px solid #95cde6;
+      padding-left: 12px; }
+    .landing .landing-image {
+      position: absolute;
+      width: 580px;
+      top: -24px;
+      left: 0;
+      z-index: 1; }
+  .shortcut {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -76px;
+    z-index: 0;
+    max-width: 1200px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.03em;
+    color: #296eb4;
+    font-weight: bold; }
+    .shortcut .shortcut-item {
+      width: 25%;
+      height: 160px;
+      background-color: #ffffff;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.25s ease-in; }
+      .shortcut .shortcut-item:hover {
+        background-color: #296eb4;
+        color: #ffffff; }
+      .shortcut .shortcut-item:first-child {
+        border-top-left-radius: 24px;
+        border-bottom-left-radius: 24px; }
+      .shortcut .shortcut-item:last-child {
+        border-top-right-radius: 24px;
+        border-bottom-right-radius: 24px; }
+      .shortcut .shortcut-item .shortcut-icon {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 16px; }
+        .shortcut .shortcut-item .shortcut-icon img {
+          height: 100%; } }
+
+/*# sourceMappingURL=style.css.map */
