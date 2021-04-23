@@ -1,0 +1,85 @@
+.company-container {
+  padding: 40px 0;
+  background-color: $background;
+}
+
+.company-header {
+  @include flexbox(between);
+  margin-bottom: 40px;
+  .company-title {
+    @include text-style(14, $blue-dark);
+    font-weight: bold;
+  }
+  .company-more {
+    @include text-style(12, $secondary);
+  }
+}
+
+.company-cards {
+  @include column-flexbox;
+}
+
+.company-card {
+  margin-bottom: 36px;
+  &:nth-child(odd) {
+    @include flexbox;
+    & .company-card-image {
+      margin-right: 16px;
+    }
+  }
+  &:nth-child(even) {
+    @include flexbox;
+    flex-direction: row-reverse;
+    & .company-card-image {
+      margin-left: 16px;
+    }
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.company-card-image {
+  height: 136px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: $white;
+  @include flexbox;
+  & img {
+    width: 120px;
+  }
+}
+
+.company-card-text {
+  width: 135px;
+  .company-name {
+    height: 24px;
+    margin-bottom: 8px;
+    @include text-style(14, $dark);
+    font-weight: bold;
+  }
+  .company-desc {
+    @include text-style(12, $secondary);
+  }
+}
+
+@include responsive(D) {
+  .company-container {
+    padding: 80px 0;
+  }
+
+  .company-header {
+    margin-bottom: 48px;
+    .company-title {
+      @include text-style(20);
+    }
+    .company-more {
+      @include text-style(16);
+    }
+  }
+
+  .company-cards {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
