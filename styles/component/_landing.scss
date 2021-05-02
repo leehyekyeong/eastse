@@ -83,7 +83,7 @@
       background-color: $white;
       cursor: pointer;
       @include column-flexbox;
-      transition: all 0.25s ease-in;
+      @include transition;
       &:hover {
         background-color: $blue-dark;
         color: $white;
