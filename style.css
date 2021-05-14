@@ -433,7 +433,7 @@ table {
       .container .col-lg-12 {
         width: 1140px; } }
 
-.global-nav-container {
+.gnb-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -446,30 +446,30 @@ table {
   justify-content: center;
   align-items: center; }
 
-.global-nav-row {
+.gnb-row {
   width: 100%; }
 
-.global-nav {
+.gnb-col {
   display: flex;
   justify-content: space-between;
   align-items: center; }
-  .global-nav i {
+  .gnb-col i {
     font-size: 20px; }
-  .global-nav #logo {
+  .gnb-col #logo {
     height: 20px; }
-  .global-nav .menu,
-  .global-nav .search {
+  .gnb-col .menu,
+  .gnb-col .search {
     display: none; }
 
 @media screen and (min-width: 1200px) {
-  .global-nav-container {
+  .gnb-container {
     height: 80px; }
-  .global-nav i {
+  .gnb-col i {
     display: none; }
-  .global-nav #logo {
+  .gnb-col #logo {
     height: 36px; }
-  .global-nav .menu,
-  .global-nav .search {
+  .gnb-col .menu,
+  .gnb-col .search {
     display: flex; }
   .menu {
     display: flex;
@@ -932,5 +932,125 @@ table {
     text-align: right; }
   .photo-text:nth-child(even) {
     text-align: left; } }
+
+.footer-container {
+  background-color: #d7f0fb;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: -0.015em;
+  padding: 32px 0; }
+
+.footer-container .logo {
+  display: block;
+  overflow: hidden;
+  height: 32px;
+  margin-bottom: 24px; }
+  .footer-container .logo img {
+    display: block;
+    height: 100%; }
+
+.about {
+  margin-bottom: 28px; }
+  .about .business-hours {
+    margin-bottom: 24px; }
+    .about .business-hours li {
+      margin-bottom: 4px; }
+      .about .business-hours li:last-child {
+        margin: 0; }
+    .about .business-hours li strong {
+      display: inline-block;
+      margin-right: 12px;
+      font-weight: bold;
+      color: #296eb4; }
+  .about .contact li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 12px; }
+    .about .contact li:last-child {
+      margin: 0; }
+    .about .contact li .contact-item {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .about .contact li .contact-icon {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 12px; }
+      .about .contact li .contact-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; }
+    .about .contact li .contact-text {
+      display: inline-block; }
+
+.sns {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 28px; }
+  .sns li {
+    margin-right: 16px; }
+    .sns li:last-child {
+      margin: 0; }
+    .sns li .sns-icon {
+      width: 32px;
+      height: 32px;
+      padding: 7.2px;
+      background-color: #ffffff;
+      border-radius: 100%; }
+      .sns li .sns-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; }
+    .sns li .sns-text {
+      display: none; }
+
+.information {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start; }
+  .information ul {
+    width: 50%; }
+  .information li {
+    color: #8c8d96;
+    height: 20px;
+    margin-bottom: 12px; }
+    .information li:last-child {
+      margin: 0; }
+
+@media screen and (min-width: 1200px) {
+  .footer-container {
+    padding: 48px 0;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: -0.02em; }
+  .about {
+    margin: 0; }
+    .about .business-hours {
+      margin-bottom: 32px; }
+    .about .contact .contact-item {
+      margin-bottom: 16px; }
+  .sns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; }
+    .sns li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 0;
+      margin-bottom: 24px; }
+      .sns li .sns-icon {
+        width: 48px;
+        height: 48px;
+        padding: 10.6px;
+        margin-right: 12px; }
+      .sns li .sns-text {
+        display: block; }
+  .information li {
+    margin-bottom: 20px; } }
 
 /*# sourceMappingURL=style.css.map */
