@@ -1,4 +1,4 @@
-.global-nav-container {
+.gnb-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -10,11 +10,11 @@
   @include flexbox;
 }
 
-.global-nav-row {
+.gnb-row {
   width: 100%;
 }
 
-.global-nav {
+.gnb-col {
   @include flexbox(between, center);
   i {
     font-size: 20px;
@@ -30,10 +30,10 @@
 }
 
 @include responsive(D) {
-  .global-nav-container {
+  .gnb-container {
     height: 80px;
   }
-  .global-nav {
+  .gnb {
     i {
       display: none;
     }
